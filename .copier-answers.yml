@@ -1,0 +1,17 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v0.11.0
+_src_path: gl:openscm/copier-core-python-repository
+conda_release: false
+email: hoegner@iiasa.ac.at
+include_cli: false
+name: Annika Hoegner
+notebook_based_docs: true
+package_manager: uv
+pandas_doctests: false
+plot_dependencies: true
+project_description_short: Draft project for attribution library.
+project_name_human: Attribution library
+project_name_pip: attribution-scratch
+project_name_python: attribution_scratch
+project_url: https://github.com/eahoegner/attribution-scratch
+track_lock_file: true
