@@ -24,11 +24,26 @@ Q = pint.get_application_registry().Quantity
 
 # %%
 def test_add_unit_aware():
-    a = Q(1.0, "Mt CO2/yr")
-    b = Q(1.0, "kt CO2/yr")
+    T_rel = Q(30.0, "K")
+    T_abs = Q(274.15, "K")
+    exp = Q(31.0, "degC")
 
-    exp = Q(1.001, "Mt CO2/yr")
-
-    res = add_unit_aware(a, b)
+    res = add_unit_aware(T_rel, T_abs)
 
     pint.testing.assert_equal(res, exp)
+
+
+# %%
+def test_add_plain_floats():
+    T_rel = Q(30)
+    T_abs = Q(274.15)
+    exp = Q(31.0)
+
+    res = add_unit_aware(T_rel, T_abs)
+
+    pint.testing.assert_equal(res, exp)
+
+
+# %%
+test_add_unit_aware()
+test_add_plain_floats()

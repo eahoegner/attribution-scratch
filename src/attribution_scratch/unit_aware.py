@@ -21,5 +21,3 @@ Unit aware operations
 # %%
 def add_unit_aware(a: float, b: float) -> float:
     return a + b
-
-# %%
